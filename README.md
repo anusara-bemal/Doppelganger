@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=DisGalaxyX&fontSize=80&fontAlignY=35&animation=twinkling&fontColor=gradient"/> </a> 
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Doppelganger&fontSize=80&fontAlignY=35&animation=twinkling&fontColor=gradient"/> </a> 
 </p>
 
 <p align="center"> 
@@ -11,7 +11,7 @@
 </p>
 
 ## ⛔ Warning
-if you need to use bot please add your server id to this first [access.json](https://github.com/Adivise/DisGalaxyX/blob/main/settings/models/access.json)
+if you need to use bot please add your server id to this first [access.json](https://github.com/Adivise/Doppelganger/blob/main/settings/models/access.json)
 
 ## 📑 Feature
 - [x] Music Systems
@@ -27,14 +27,16 @@ if you need to use bot please add your server id to this first [access.json](htt
 - [x] SoundCloud
 - [x] Spotify
 - [x] Deezer
+- [x] And More 700+ Site Support
 
 <details><summary>📎 Requirements [CLICK ME]</summary>
 <p>
 
 ## 📎 Requirements
 
-- Node.js+ **[Download](https://nodejs.org/en/download/)**
+- Node.js **[Download](https://nodejs.org/en/download/)**
 - Discord Bot Token **[Guide](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot)**
+- FFmpeg **[Download!!](https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip)**
 
 </p>
 </details>
@@ -42,8 +44,8 @@ if you need to use bot please add your server id to this first [access.json](htt
 ## 📚 Installation
 
 ```
-git clone https://github.com/Adivise/DisGalaxyX
-cd DisGalaxyX
+git clone https://github.com/Adivise/Doppelganger
+cd Doppelganger
 npm install
 ```
 
@@ -72,13 +74,13 @@ Copy or Rename `config.json.example` to `config.json` and fill out the values:
         "01.",
         "02.",
         "03.",
-	"04.",
-	"05.",
-	"06.",
-	"07.",
-	"08.",
-	"09.",
-	"10."
+	    "04.",
+	    "05.",
+	    "06.",
+	    "07.",
+	    "08.",
+	    "09.",
+	    "10."
     ],
     "EMBED_COLOR": "#000001",
     "OWNER_ID": "YOUR_DISCORD_ID",

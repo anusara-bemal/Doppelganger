@@ -3,6 +3,8 @@ const { DisTube } = require('distube');
 const { SoundCloudPlugin } = require('@distube/soundcloud');
 const { SpotifyPlugin } = require('@distube/spotify');
 const { DeezerPlugin } = require('@distube/deezer');
+const { YouTubePlugin } = require('@distube/youtube');
+const { YtDlpPlugin } = require('@distube/yt-dlp');
 
 /// Call Config
 const { TOKEN, PREFIX, OWNER_ID } = require("./settings/config.json");
@@ -36,15 +38,14 @@ for (let i = 0; i < TOKEN.length ; i++) {
     if (!client.token) client.token = TOKEN[i];
 
     client.distube = new DisTube(client, {
-        searchSongs: 0, /// SET TO 5 FOR ENABLE SEARCH MODE!
-        searchCooldown: 30,
-        leaveOnEmpty: true,
-        emptyCooldown: 120,
-        leaveOnFinish: true,
-        leaveOnStop: true,
+        savePreviousSongs: true,
+        emitAddListWhenCreatingQueue: true,
+        emitAddSongWhenCreatingQueue: true,
         plugins: [
             new SoundCloudPlugin(),
             new DeezerPlugin(),
+            new YouTubePlugin(),
+            new YtDlpPlugin({ update: false }),
             checkSpotify(client)
         ],
     });
@@ -65,7 +66,6 @@ function checkSpotify(client) {
 
 function spotifyOn(client) {
     return new SpotifyPlugin({
-        emitEventsAfterFetching: true,
         api: {
             clientId: client.config.SPOTIFY_ID,
             clientSecret: client.config.SPOTIFY_SECRET
@@ -74,7 +74,5 @@ function spotifyOn(client) {
 }
 
 function spotifyOff() {
-    return new SpotifyPlugin({
-        emitEventsAfterFetching: true,
-    })
+    return new SpotifyPlugin({})
 }
