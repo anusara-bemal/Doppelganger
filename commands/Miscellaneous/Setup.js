@@ -52,7 +52,9 @@ module.exports = {
             bot.on("ready", async (msg) => {
                 // auto create request channel!!!!
                 const forum = bot.channels.cache.get(string);
+                if (!forum) return;
                 const guild = bot.guilds.cache.get(forum.guild.id)
+                if (!guild) return;
 
                 const db = await GSetup.get(`${guild.id}_${bot.user.id}`);
                 if (db.setup_enable === true) return;
