@@ -1,13 +1,9 @@
 {
-    "TOKEN": [
-        "TOKEN_01"
-    ],
-    "PREFIX": [
-        "01."
-    ],
+    "TOKEN":""
+    "PREFIX": "",
     "EMBED_COLOR": "#000001",
     "OWNER_ID": "YOU_DISCORD_ID",
-    "DEV_ID": [],
+    "DEV_ID": "",
     "SPOTIFY": false,
     "SPOTIFY_ID": "YOU_SPOTIFY_ID",
     "SPOTIFY_SECRET": "YOU_SPOTIFY_SECRET"
